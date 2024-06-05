@@ -1,7 +1,7 @@
-import docker.errors
 from fastapi import FastAPI
 
 import docker
+
 
 client = docker.from_env()
 app = FastAPI()
