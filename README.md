@@ -23,6 +23,8 @@ Some endpoints:
 
 You can add more routes and more functions inside [docker-router.py](docker-router.py) script. It is a FastAPI app.
 
+You can also add more services inside [docker-compose.yaml](docker-compose.yaml) file.
+
 ## Cite
 
 [Building RAG Agents with LLMs](https://resources.nvidia.com/en-us-ai-large-language-models/building-rag-agents-with-llms-dli-course?lx=Hh_Qnz)
