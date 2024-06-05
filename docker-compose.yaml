@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  jupyter-lab:
+    image: jupyter-lab-server:latest
+    build: 
+      context: .
+      dockerfile: docker/dockerfile.jupyterlab
+    container_name: jupyter-lab-container
+    volumes:
+      - ./notebooks/:/notebooks/
+    ports: 
+    - "8888:8888"
+    - "9012:9012"
+
+  docker-router:
+    image: docker-router:latest
+    build:
+      context: .
+      dockerfile: docker/dockerfile.docker
+    container_name: docker-router-container
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8070:8070"
